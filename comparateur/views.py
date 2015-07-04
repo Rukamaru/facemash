@@ -5,4 +5,4 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'comparateur/accueil.html', {'date': datetime.now()})
+    return render(request, 'comparateur/index.html', {'date': datetime.now()})
