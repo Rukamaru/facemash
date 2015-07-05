@@ -81,7 +81,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+#La première variable indique l'URL du dossier depuis lequel vos fichiers seront accessibles. La deuxième renseigne le chemin vers ces fichiers sur votre disque dur.
+STATIC_URL = '/static/'   # Qui devrait déjà être la configuration par défaut
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 # définir une liste de dossiers où Django ira chercher les templates en priorité.
 TEMPLATE_DIRS = (

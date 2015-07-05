@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <link rel="stylesheet" href="/media/css/style.css" />
-   <title>{% block title %}Mon blog sur les crêpes bretonnes{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<header>Facemash</header>
-    <nav>
-       {% block nav %}
-       <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contact/">Contact</a></li>
-       </ul>
-       {% endblock %}
-   </nav>
-   <section id="content">
-       {% block content %}{% endblock %}
-   </section>
-<footer>&copy; Facemash</footer>
+  <header>Facemash</header>
+
+  <section id="content">
+      <h1>Bienvenue sur mon blog</h1>
+      <p>La date actuelle est : {{ date }}</p>
+      {% load static %}
+      <img src="{% static 'comparateur/maquette.png' %}" alt="Mon image" />
+      {% block content %}{% endblock %}
+  </section>
+
+  <footer>&copy; Facemash</footer>
 </body>
 </html>
