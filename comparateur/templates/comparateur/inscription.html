@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- RECUPERATION DES FICHIERS CSS AVEC DJANGO -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <h1>Facemash</h1>
+  </header>
+
+  <section>
+      <div id="contenu">
+        <h2>Inscription</h2>
+        <br>
+        <div id="formInscription">
+          <form action="" name="inscription" id="formulaire-inscription" method="POST">
+              <label for="nom">Nom : </label>
+              <input class="inputText" type="text" name="nom" id="nom" placeholder="Nom" value="">
+              <br>
+
+              <label for="prenom">Prénom : </label>
+              <input class="inputText" type="text" name="prenom" id="prenom" placeholder="Prénom" value="">
+              <br>
+
+              <label for="genre">Genre : </label>
+              <input type="radio" name="genre" id="genre-mme" value="0">Mme.
+              <input type="radio" name="genre" id="genre-mr" value="1" checked="checked">M.
+              <br><br>
+
+              <label for="pseudo">Pseudo : </label>
+              <input class="inputText" type="text" name="pseudo" id="pseudo" placeholder="Pseudo" value="">
+              <br>
+
+              <label for="email">E-mail : </label>
+              <input class="inputText" type="email" name="email" id="email" placeholder="" value="">
+              <br>
+
+              <label for="email">Confirmation e-mail : </label>
+              <input class="inputText" type="email" name="confirmation_email" id="email" placeholder="" value="">
+              <br>
+
+              <label for="date_de_naissance">Date de naissance : </label>
+              <input class="inputText" type="date" name="date_de_naissance" id="date_de_naissance" placeholder="08/11/2014" value="">
+              <br>
+
+              <label for="mdp">Mot de passe : </label>
+              <input class="inputText" type="password" name="mdp" id="mdp">
+              <br>
+
+              <label for="confirmation_mdp">Confirmation mot de passe : </label>
+              <input class="inputText" type="password" name="confirmation_mdp" id="confirmation_mdp">
+              <br>
+
+              <label>Captcha</label>
+              <div class="g-recaptcha" data-sitekey="6LfMuAITAAAAAPGPayaMgXpspgv-9QgI7MZbhiQv"></div>
+              <br>
+
+              <label for="CGU">J'accepte les
+                  <span>
+                      <a href="CGU.php">conditions générales d'utilisation*</a>
+                  </span>
+              </label>
+              <input type="checkbox" name="condition_general_utilisation">
+              <br><br>
+
+              <input class="inputValider" type="submit" value="S'inscrire" name="valider">
+              <br>
+
+          </form>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <div id="contenuFooter">
+      <h1></h1>
+
+    </div>
+    <div id="basPage">
+      <p>&copy; Facemash</p>
+    </div>
+  </footer>
+</body>
+</html>
