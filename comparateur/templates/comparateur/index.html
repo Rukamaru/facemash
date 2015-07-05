@@ -3,6 +3,8 @@
 <head>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -12,8 +14,20 @@
 
   <section>
       <div id="contenu">
-        <div id="">
-          
+        <h2>Quel est le Pokémon que tu préfère ?</h2>
+        <div id="image">
+            <table>
+              <tr>
+                <td><img src="{% static 'comparateur/image1.png' %}" alt="image1"></td>
+                <td><p>ou</p></td>
+                <td><img src="{% static 'comparateur/image2.png' %}" alt="image2"></td>
+              </tr>
+              <tr>
+                <td>Salamèche</td>
+                <td></td>
+                <td>Bullbizard</td>
+              </tr>
+            </table>
         </div>  
       </div>
   </section>
