@@ -1,3 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 header{
-	color: red;
+	width: 100%;
+	background: black;
+}
+header h1{
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+footer{
+	width: 100%;
+}
+footer #statistique{
+	background: #1C628C;
+}
+footer #statistique h1{
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+footer #basPage{
+	background: #113A51;
+}
+footer #basPage p{
+	color: white;
 }

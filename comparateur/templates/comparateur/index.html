@@ -6,16 +6,25 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-  <header>Facemash</header>
+  <header>
+    <h1>Facemash</h1>
+  </header>
 
-  <section id="content">
-      <h1>Bienvenue sur mon blog</h1>
-      <p>La date actuelle est : {{ date }}</p>
-      {% load static %}
-      <img src="{% static 'comparateur/maquette.png' %}" alt="Mon image" />
-      {% block content %}{% endblock %}
+  <section>
+      <div id="contenu">
+        <div id="">
+          
+        </div>  
+      </div>
   </section>
 
-  <footer>&copy; Facemash</footer>
+  <footer>
+    <div id="statistique">
+      <h1>Statistique</h1>
+    </div>
+    <div id="basPage">
+      <p>&copy; Facemash</p>
+    </div>
+  </footer>
 </body>
 </html>
