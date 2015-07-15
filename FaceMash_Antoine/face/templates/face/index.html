@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" description="FaceCompare">
-    <title>FaceCompare</title>
+    <title></title>
 </head>
 <body>
-    <h2>FaceCompare</h2>
-    <p>
-        {{ number_1 }} + {{ number_2 }} = <strong>{{ total }}</strong><br>
-        Direct calculation in template : {{ number_1 | add:number_2 }}
-
-        Rainbow colors are :
-        <ul>
-        {% for code, nom in colors.items %}
-            <li style="{{ code }}">{{ nom }}</li>
-        {% endfor %}
-        </ul>
-    </p>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/face/{{ question.id }}/detail">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
 </body>
 </html>

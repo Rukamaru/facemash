@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'tp5u+=h6&91bha38%g4hoq^go*#$=j!@yv@dn9u*puj-ea%jw^'
+SECRET_KEY = 'wrgef!l2jtaw1_g&_=*j@j8n3#_%(-flke$#o@oai!15fh(x1$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_STRING_IF_INVALID = ''
+
 WSGI_APPLICATION = 'FaceMash.wsgi.application'
 
 
@@ -105,3 +107,8 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+# media
+
+MEDIA_ROOT = BASE_DIR + "/media"
+MEDIA_URL = "/photo/"
