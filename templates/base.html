@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FaceMash{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "face/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+</head>
+<body>
+    <header>
+        <h1><a style="color: white; text-decoration: none;" href="{% url 'index' %}">FaceMash</a></h1>
+    </header>
+    {{ success_message }}
+    {{ error_message }}
+
+    <div id="contenu">
+        {% block content %}
+            {% if latest_question_list %}
+                <div id="latest_questions">
+                    Questions recentes :<br>
+                   {% for question in latest_question_list %}
+                        <a class="latest_question" href="{% url 'face:detail' question.id %}">{{ question.question_text }}</a>
+                   {% endfor %}
+                </div>
+            {% else %}
+                <p>Aucune question n'a ete posee pour le moment !</p>
+            {% endif %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static "face/jquery-2.1.4.min.js" %}"></script>
+    <script src="{% static "face/main.js" %}">  </script>
+    <footer><a href="{% url 'face:connexion' %}">Connexion</a></footer>
+</body>
+</html>

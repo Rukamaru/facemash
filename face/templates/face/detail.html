@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}FaceMash - {{ question.question_text }}{% endblock %}
+
+{% block content %}
+    <div id="title">
+        <h2>{{ question.question_text }}</h2>
+        <p>Par {{ question.author }} le {{ question.pub_date }}. Cliquez pour choisir.</p>
+        {{ votes }}
+    </div>
+
+    <div id="image">
+        <form action="{% url 'face:vote' question.id %}" method="post">
+            {% csrf_token %}
+
+            {% for choice in choices %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.pk }}">
+                <label for="choice{{ forloop.counter }}"><div class="img" style="background-image:url('{{ choice.photo.file.url }}')"></div></label>
+            {% endfor %}
+
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,320 @@
+/********************************************* HEADER *********************************************/
+/**************************************************************************************************/ 
+
+html, body {
+    margin: 0;
+	height: 100%;
+}
+
+header{
+	background: black;
+}
+header h1{
+	color: white;
+	padding: 10px;
+    margin: 0;
+	text-align: center;
+	font-family: Montserrat;
+}
+
+/********************************************* VOTES *********************************************/
+/*************************************************************************************************/
+
+#contenu{
+	margin: 25px 0 0 0;
+}
+
+#title{
+	text-align: center;
+    font-family: lato;
+}
+
+#image{
+	margin: 50px 0 50px 0;
+	text-align: center;
+	font-size: 25px;
+}
+
+.img {
+    display: inline-block;
+    width:  300px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+	border: 4px solid silver;
+	border-radius: 3px;
+}
+
+#contenu input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+#contenu input[type="radio"] + label > .img {
+    cursor: pointer;
+}
+
+/* #contenu input[type="radio"]:checked + label > img {
+    border: 2px solid #f00;
+} */
+
+
+/********************************************* RESULTATS *********************************************/
+/*****************************************************************************************************/
+
+#titleResults {
+	margin: 10px 0 10px 0;
+}
+
+#results {
+	border: solid 2px black;
+	padding: 0 0 10px 20px;
+	margin: 0 10px 0 10px;
+}
+
+.img.aside {
+	/* float: left; */
+    width:  100px;
+    height: 100px;
+    border-width: 2px;
+}
+
+/********************************************* INSCRIPTION *********************************************/
+/*******************************************************************************************************/
+#contenuInscription #formulaire{
+	background: white;
+	margin: 0 auto;
+	width: 30%;
+	border:2px solid #333333;
+}
+
+#contenuInscription  #formulaire h2{
+	background: #333333;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 5px 0 5px 0;
+}
+
+#contenuInscription  #formulaire form{
+	margin:20px 0 0 0;
+}
+
+#contenuInscription  #formulaire label{
+	margin: 0 15px 15px 40px;
+}
+
+form input, form select, form input {
+	background: #fff;
+	color: #333333;
+	padding: 5px;
+	margin-bottom: 2px;
+}
+
+#contenuInscription  #formulaire input, #contenuInscription  #formulaire select, #contenuInscription  #formulaire textarea{
+	/* Compatibilité Navigateur : Internet Explorer */
+	transition-proprety:				width;
+	transition-duration:	 			0.3s;
+	transition-timing-function:			ease-out;
+	
+	/* Compatibilité Navigateur : Mozilla Firefox */
+	-moz-transition-proprety:			width;
+	-moz-transition-duration: 			0.3s;
+	-moz-transition-timing-function:	ease-out;
+	
+	/* Compatibilité Navigateur : Google Chrome */
+	-webkit-transition-proprety:		width;
+	-webkit-transition-duration: 		0.3s;
+	-webkit-transition-timing-function:	ease-out;
+}
+
+#contenuInscription  #formulaire input#id_nom, #contenuInscription  #formulaire input#id_prenom, 
+#contenuInscription  #formulaire input#id_email, #contenuInscription  #formulaire input#id_mdp,
+#contenuInscription  #formulaire input#id_mdpconf {
+	background: #f4f5f7;
+	color: grey;
+	border: 2px solid #333333;
+	width: 350px;
+	min-height: 20px;
+	display: block;
+	border-radius: 5px;
+	margin: 0 15px 15px 40px;
+}
+#contenuInscription  #formulaire input#id_renvoi{
+	border: 2px solid white;
+	margin: 0 0 15px 0;
+
+}
+#contenuInscription  #formulaire span.helptext{
+	font-size: 12px;
+	display: block;
+	margin: 0 0 0 40px;
+}
+#contenuInscription  #formulaire select.inputSelect {
+	background: #fff;
+	color: #333333;
+	border: 2px solid #ccc;
+	width: 314px;
+	min-height: 20px;
+	display: block;
+	margin: 0 15px 15px 40px;
+}
+#contenuInscription  #formulaire textarea#id_message {
+	background: #f4f5f7;
+	color: grey;
+	border: 2px solid #333333;
+	width: 308px;
+	height: 200px;
+	margin: 0 0 10px 40px;
+	min-height: 20px;
+	display: block;
+}
+
+#contenuInscription  #formulaire input.inputValider{
+	background: #1C628C;
+	color: white;
+	border: 2px solid white;
+	width: 150px;
+	min-height: 20px;
+	display: block;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#contenuInscription  #formulaire input.inputText:focus {
+	outline:0;
+	box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur */
+	-moz-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : Mozilla */
+	-webkit-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : Google Chrome */
+	-goog-ms-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : */
+}
+#contenuInscription  #formulaire input.inputValider:focus {
+	outline:0;
+	background: #113A51;
+}
+
+/********************************************* FOOTER *********************************************/
+/**************************************************************************************************/
+
+#contenu {
+  min-height: 100%;
+  margin-bottom: -200px;
+}
+
+#contenu:after {
+  content: "";
+  display: block;
+}
+
+footer, #contenu:after {
+	height: 200px;
+}
+
+footer{
+	background: #1C628C;
+	text-align:center;
+	padding: 20px 0 0 0;
+}
+
+footer a {
+	color:white;
+}
+
+
+/********************************************* CONNEXION *********************************************/
+/*****************************************************************************************************/
+#contenuInscription{
+	margin: 0 auto;
+}
+#contenuInscription h2, #contenuConnexion h2{
+	color: black;
+	text-align: center;
+	margin: 25px 0 0 0;
+}
+
+
+#contenuConnexion {
+	margin: 40px auto;
+	text-align: center;
+}
+
+#contenuConnexion .formulaire{
+	background: white;
+	margin: 0 auto;
+	padding: 30px 0 200px 0;
+	width: 30%;
+	border:1px solid grey;
+	border-radius: 4px;
+}
+
+#contenuConnexion .formulaire input{
+	/* Compatibilité Navigateur : Internet Explorer */
+	transition-proprety:				width;
+	transition-duration:	 			0.3s;
+	transition-timing-function:			ease-out;
+
+	/* Compatibilité Navigateur : Mozilla Firefox */
+	-moz-transition-proprety:			width;
+	-moz-transition-duration: 			0.3s;
+	-moz-transition-timing-function:	ease-out;
+
+	/* Compatibilité Navigateur : Google Chrome */
+	-webkit-transition-proprety:		width;
+	-webkit-transition-duration: 		0.3s;
+	-webkit-transition-timing-function:	ease-out;
+
+	background: #f4f5f7;
+	color: grey;
+	border: 2px solid white;
+	width: 300px;
+	min-height: 20px;
+	border-radius: 5px;
+	margin: 0 15px 15px 40px;
+	text-align: center;
+}
+
+#contenuConnexion .formulaire span{
+	font-size: 15px;
+	margin: 0 15px 0 15px;
+}
+
+#contenuConnexion .formulaire .inputValider{
+	/* background: #1C628C; */
+	background: #f4f5f7;
+	color: grey;
+	border: 1px solid grey;
+	width: 150px;
+	min-height: 20px;
+	display: block;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#contenuConnexion .formulaire input:focus{
+	outline:0;
+	box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur */
+	-moz-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : Mozilla */
+	-webkit-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : Google Chrome */
+	-goog-ms-box-shadow:0px 0px 10px 3px rgba(206, 206, 206, 0.5); /* Compatibilité navigateur : */
+}
+
+#contenuConnexion .formulaire .validerConnexion:focus{
+	outline: 0;
+	background: rgba(13, 169, 179, 0.8);
+}
+
+/********************************************* INDEX *********************************************/
+/*************************************************************************************************/
+
+#latest_questions {
+	font-size: 23px;
+	text-align: center;
+	margin: 40px 0 0 0;
+	
+}
+
+.latest_question {
+	font-size: 18px;
+}

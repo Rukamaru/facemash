@@ -56,7 +56,7 @@ ROOT_URLCONF = 'FaceMash.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request',
             ],
         },
     },
@@ -108,7 +109,11 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
 
-# media
+# Media
 
-MEDIA_ROOT = BASE_DIR + "/media"
-MEDIA_URL = "/photo/"
+MEDIA_ROOT = BASE_DIR + "/media/photos"
+MEDIA_URL = "/photos/"
+
+# Connexion
+
+LOGIN_URL = "/face/connexion/"

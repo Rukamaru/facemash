@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}FaceMash - {{ question.question_text }}{% endblock %}
+
+{% block content %}
+    <div id="results">
+        <div id="titleResults">Resultats pour : <em style="font-size:18px;">{{ question.question_text }}</em><br>
+            Nombre total de votes : {{ votes }}. <a href="{% url 'face:detail' question.id %}">Retour à la question</a>
+        </div>
+
+        {% for choice in choices %}
+            <div class="img aside" style="background-image:url({{ choice.photo.file.url }})"></div><br>
+            {{ choice.choice_text}}<br>
+            {{ choice.votes }} vote{{ choice.votes|pluralize }}<br>
+        {% endfor %}
+    </div>
+{% endblock %}

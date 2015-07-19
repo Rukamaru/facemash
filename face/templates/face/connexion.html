@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}FaceMash - connexion{% endblock %}
+{% block content %}
+    <div id="contenuConnexion">
+        <div class="formulaire">
+            {{ error_message }}
+            <form action="{% url "face:connexion" %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" value="" id="username" placeholder="Identifiant">
+                <input type="password" name="password" value="" id="password" placeholder="Mot de passe">
+
+                <input class="inputValider" type="submit" value="Connexion">
+            </form>
+        </div>
+    </div>
+{% endblock %}
